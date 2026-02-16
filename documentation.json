@@ -2,128 +2,137 @@
   "name": "Nyao",
   "colors": {
     "light": {
-      "brand": "#3B82F6",
+      "brand": "#ffb911",
       "heading": "undefined",
       "text": "undefined"
     },
     "dark": {
-      "brand": "#87B1F6",
+      "brand": "#ffb911",
       "heading": "undefined",
       "text": "undefined"
     }
   },
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Documentation",
-        "icon": "book",
-        "groups": [
+        "language": "en",
+        "tabs": [
           {
-            "group": "Getting Started",
-            "icon": "rocket",
+            "tab": "Documentation",
+            "icon": "book",
+            "groups": [
+              {
+                "group": "Getting Started",
+                "icon": "rocket",
+                "pages": [
+                  {
+                    "title": "Introduction",
+                    "path": "introduction",
+                    "icon": "home"
+                  },
+                  {
+                    "title": "Quickstart",
+                    "path": "quickstart",
+                    "icon": "zap"
+                  }
+                ]
+              },
+              {
+                "group": "Core Concepts",
+                "icon": "layers",
+                "pages": [
+                  {
+                    "title": "Features",
+                    "path": "features",
+                    "icon": "file-text"
+                  }
+                ]
+              },
+              {
+                "group": "Advanced",
+                "icon": "package",
+                "pages": [
+                  {
+                    "title": "Integrations",
+                    "path": "integrations",
+                    "icon": "plug"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API Reference",
+            "icon": "code",
+            "groups": [
+              {
+                "group": "Endpoints",
+                "openapi": "api-reference/openapi.yaml",
+                "pages": []
+              }
+            ]
+          },
+          {
+            "tab": "Help Center",
+            "icon": "help-circle",
             "pages": [
               {
-                "title": "Introduction",
-                "path": "introduction",
+                "title": "Help Center",
+                "path": "help-center",
                 "icon": "home"
               },
               {
-                "title": "Quickstart",
-                "path": "quickstart",
-                "icon": "zap"
+                "group": "FAQs",
+                "icon": "help-circle",
+                "expandable": false,
+                "pages": [
+                  {
+                    "title": "Getting Started FAQ",
+                    "path": "help-center/faq/getting-started"
+                  }
+                ]
+              },
+              {
+                "group": "Troubleshooting",
+                "icon": "alert-circle",
+                "expandable": false,
+                "pages": [
+                  {
+                    "title": "Cannot Edit Document",
+                    "path": "help-center/troubleshooting/cannot-edit-doc"
+                  }
+                ]
+              },
+              {
+                "group": "Guides",
+                "icon": "book-open",
+                "expandable": false,
+                "pages": [
+                  {
+                    "title": "Create Your First Document",
+                    "path": "help-center/guides/create-first-doc"
+                  }
+                ]
               }
             ]
           },
           {
-            "group": "Core Concepts",
-            "icon": "layers",
+            "tab": "Changelog",
+            "icon": "clock",
             "pages": [
               {
-                "title": "Features",
-                "path": "features",
-                "icon": "file-text"
+                "title": "Release History",
+                "path": "changelog",
+                "icon": "history"
               }
             ]
-          },
-          {
-            "group": "Advanced",
-            "icon": "package",
-            "pages": [
-              {
-                "title": "Integrations",
-                "path": "integrations",
-                "icon": "plug"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "icon": "code",
-        "groups": [
-          {
-            "group": "Endpoints",
-            "openapi": "api-reference/openapi.yaml",
-            "pages": []
-          }
-        ]
-      },
-      {
-        "tab": "Help Center",
-        "icon": "help-circle",
-        "pages": [
-          {
-            "title": "Help Center",
-            "path": "help-center",
-            "icon": "home"
-          },
-          {
-            "group": "FAQs",
-            "icon": "help-circle",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Getting Started FAQ",
-                "path": "help-center/faq/getting-started"
-              }
-            ]
-          },
-          {
-            "group": "Troubleshooting",
-            "icon": "alert-circle",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Cannot Edit Document",
-                "path": "help-center/troubleshooting/cannot-edit-doc"
-              }
-            ]
-          },
-          {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Create Your First Document",
-                "path": "help-center/guides/create-first-doc"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Changelog",
-        "icon": "clock",
-        "pages": [
-          {
-            "title": "Release History",
-            "path": "changelog",
-            "icon": "history"
           }
         ]
       }
     ]
-  }
+  },
+  "template": "atlas",
+  "logo-dark": "https://blob-cdn.documentation.ai/org-5c79b1a6-6907-4e9c-9e01-7550744d9e5e/doc-1442a1b6-1f83-463c-a404-4d5b643f9657/1771270323470-fce0dze4hf7-Frame--1-.png?q=85&fm=auto&auto=compress%2Cformat",
+  "logo-light": "https://blob-cdn.documentation.ai/org-5c79b1a6-6907-4e9c-9e01-7550744d9e5e/doc-1442a1b6-1f83-463c-a404-4d5b643f9657/1771270323470-fce0dze4hf7-Frame--1-.png?q=85&fm=auto&auto=compress%2Cformat",
+  "favicon": "https://blob-cdn.documentation.ai/org-5c79b1a6-6907-4e9c-9e01-7550744d9e5e/doc-1442a1b6-1f83-463c-a404-4d5b643f9657/1771270323470-fce0dze4hf7-Frame--1-.png?q=85&fm=auto&auto=compress%2Cformat"
 }

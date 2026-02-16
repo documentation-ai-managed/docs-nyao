@@ -1,120 +1,142 @@
 ---
 title: Quickstart Guide
-description: Get up and running with Nyao by creating your account and setting up your first documentation space in just a few minutes.
+description: Get up and running with Nyao by creating your account, setting up your first AI chatbot project, and embedding it on your website in just a few minutes.
 ---
 
 ## Prerequisites
 
-<Callout kind="info" title="Before You Begin">
-You need a modern web browser like Chrome, Firefox, or Safari. No software installation required. An email address for account verification is recommended.
+Before you begin, ensure you have the following:
+
+<Callout kind="info">
+- A modern web browser like Chrome, Firefox, or Safari
+- A valid email address (or a Google account) for signup
+- A website URL you want your chatbot to learn from
+- A Stripe-compatible payment method for your subscription plan
 </Callout>
 
-Nyao makes it easy to set up your documentation workspace. Follow these steps to get started in minutes.
+## Create Your Account
 
-## Step-by-Step Setup
+Sign up for Nyao in under 2 minutes.
 
 <Steps>
-  <Step title="Sign Up for Nyao" icon="user-plus">
-    Visit `https://www.nyao.io` and click **Sign Up**.
-
-    Fill in your email, create a password, and complete the verification process. Nyao uses secure email verification to protect your account.
+  <Step title="Visit the Signup Page" icon="external-link">
+    Navigate to `https://nyao.bmarguerite.fr/app/signup` and click **Get Started for Free**.
   </Step>
 
-  <Step title="Create Your First Workspace" icon="folder-plus">
-    After logging in, select **New Workspace** from the dashboard.
+  <Step title="Enter Your Details" icon="user">
+    Sign up with your Google account for one-click access, or provide your email and create a password.
 
-    Enter a name like `My Project Docs` and choose a description. Workspaces organize your documentation spaces.
+    <Callout kind="tip">
+      Use a strong password with at least 12 characters.
+    </Callout>
   </Step>
 
-  <Step title="Add Initial Documents" icon="file-plus">
-    Inside your workspace, click **Add Document**.
-
-    Choose between manual entry or import. Start with a simple Markdown file for your README.
-
-    ```markdown
-    # Welcome to My Project
-
-    This is your first document in Nyao.
-
-    ## Features
-    - Easy editing
-    - Real-time previews
-    ```
+  <Step title="Verify Your Email" icon="mail">
+    If you signed up with email, check your inbox for a verification email from Nyao and click the link to activate your account.
   </Step>
 
-  <Step title="Explore Basic Navigation" icon="compass">
-    Familiarize yourself with the interface:
-
-    - **Sidebar**: Manage workspaces and documents
-    - **Editor**: Write in Markdown with live preview
-    - **Publish**: Share your docs publicly or privately
-
-    Save your changes automatically syncs across devices.
+  <Step title="Log In" icon="log-in">
+    Return to the login page and sign in with your credentials. You'll land on the onboarding page to create your first project.
   </Step>
 </Steps>
 
-## Adding Documents: Multiple Methods
+## Create Your First Chatbot Project
 
-Use these common approaches to populate your workspace.
+Set up your AI-powered chatbot in a few steps.
+
+<Steps>
+  <Step title="Fill the Onboard Form" icon="cpu">
+    From the onboarding page, provide the following details:
+
+    - **Website URL** — The website Nyao will crawl to build your chatbot's knowledge base
+    - **Language** — The primary language for your chatbot (English, French, Spanish, Dutch, German, or Italian)
+    - **Plan** — Choose a subscription plan (Starter, Pro, or Enterprise)
+  </Step>
+
+  <Step title="Complete Payment" icon="credit-card">
+    You'll be redirected to Stripe Checkout. Complete your payment to activate the automated setup.
+
+    <Callout kind="info">
+      Your subscription includes monthly message credits, automatic web crawling, and more depending on your plan.
+    </Callout>
+  </Step>
+
+  <Step title="Watch the Magic Happen" icon="sparkles">
+    After payment, Nyao automatically:
+
+    1. **Crawls your website** — Extracts content from your pages
+    2. **Processes knowledge** — Uses AI to understand your content, generate a chatbot prompt, welcome message, and suggested questions
+    3. **Styles your chatbot** — Detects your logo, brand colors, and applies them to the widget
+
+    A real-time stepper shows progress for each phase. Once complete, you'll see a success screen with confetti!
+  </Step>
+</Steps>
+
+## Embed the Chatbot on Your Website
+
+Deploy your chatbot widget with a single script tag.
 
 <Tabs>
-  <Tab title="Manual Creation" icon="edit-3">
-    Create new files directly in the editor. Supports Markdown, HTML, and more.
+  <Tab title="Script Tag" icon="code">
+    Add the following snippet before the closing `</body>` tag of your website:
 
-    <Callout kind="tip">
-      Use folders to organize large projects.
-    </Callout>
+````html
+<script src="https://nyao.bmarguerite.fr/widget/embed.js?chatbotId=YOUR_CHATBOT_ID&locale=fr"></script>
+````
+
+    Replace `YOUR_CHATBOT_ID` with the ID found in your project dashboard.
   </Tab>
 
-  <Tab title="Import from GitHub" icon="github">
-    Connect your GitHub repo and import Markdown files automatically.
+  <Tab title="iframe" icon="layout">
+    Alternatively, embed the chatbot directly as an iframe:
 
-    Steps:
-    1. Go to **Import** > **GitHub**
-    2. Authorize Nyao
-    3. Select repo and branch
-  </Tab>
-
-  <Tab title="Upload Files" icon="upload">
-    Drag and drop local Markdown or text files into your workspace.
+````html
+<iframe
+  src="https://nyao.bmarguerite.fr/widget/YOUR_CHATBOT_ID"
+  style="position:fixed;bottom:80px;right:20px;width:400px;height:600px;border:none;border-radius:20px;z-index:9999;"
+></iframe>
+````
   </Tab>
 </Tabs>
 
-```mermaid
-graph TD
-    A[Sign Up] --> B[New Workspace]
-    B --> C[Add Document]
-    C --> D[Publish & Share]
-```
+Once embedded, a chat button appears in the bottom-right corner of your site. Visitors click it to open the chatbot widget.
 
-## Interface Overview
+## Dashboard Tour
+
+Familiarize yourself with the key areas of your project dashboard:
 
 <Columns cols={3}>
-  <Card title="Sidebar Navigation" icon="menu">
-    Access workspaces, documents, and settings quickly.
+  <Card title="Chatbot Settings" icon="settings" href="#chatbot">
+    Customize your chatbot's prompt, welcome message, suggested questions, and appearance.
   </Card>
 
-  <Card title="Live Editor" icon="edit">
-    Split view with Markdown source and rendered preview.
+  <Card title="Knowledge Base" icon="brain" href="#knowledge">
+    View crawled pages, manage knowledge sources, and trigger re-crawls.
   </Card>
 
-  <Card title="Publish Controls" icon="globe">
-    Generate shareable links or embed codes.
+  <Card title="Appearance" icon="paintbrush" href="#appearance">
+    Adjust colors, logo, background style, and color scheme to match your brand.
   </Card>
 </Columns>
 
-## Next Steps
-
-<Expandable title="Need Help?" default-open="true">
-  Check these resources:
-
-  | Topic | Description |
-  |-------|-------------|
-  | Collaboration | Invite team members |
-  | Advanced Editing | Custom themes and components |
-  | Integrations | GitHub, Slack webhooks |
+<Expandable title="Keyboard Shortcuts & Tips" default-open="false">
+  - Use the sidebar to navigate between chatbot settings, knowledge base, and appearance
+  - Switch between projects using the project selector in the sidebar
+  - Access your account settings from the user menu in the bottom-left corner
 </Expandable>
 
-<Callout kind="success" title="Congratulations!">
-  You've set up your first Nyao workspace. Explore [collaboration features](/authentication) or dive into [advanced guides](/introduction).
+## Next Steps
+
+<Callout kind="tip">
+  Your chatbot is live! Explore more features to get the most out of Nyao.
 </Callout>
+
+<Columns cols={2}>
+  <Card title="Customization" icon="palette" href="/configuration">
+    Fine-tune your chatbot prompt, adjust brand colors, and configure multi-language support.
+  </Card>
+
+  <Card title="Integrations" icon="plug" href="/authentication">
+    Connect external data sources like Notion, Shopify, WooCommerce, or upload PDFs and Excel files.
+  </Card>
+</Columns>
