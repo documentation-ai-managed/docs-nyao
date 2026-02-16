@@ -1,0 +1,154 @@
+---
+title: Chatbot Settings
+description: Configure your chatbot's identity, supported languages, system prompt, and conversational tone from the General settings page.
+---
+
+## Overview
+
+The **General** settings page is where you define how your chatbot behaves and communicates. It is divided into four sections: Informations, Languages, Prompt, and Tone.
+
+<Callout kind="info">
+  Access chatbot settings by navigating to **Chatbot > General** in the sidebar of your project dashboard.
+</Callout>
+
+## Dashboard Navigation
+
+The sidebar organizes your project into two groups:
+
+<Columns cols={2}>
+  <Card title="Chatbot" icon="message-square" href="#chatbot-sections">
+    General, Appearance, Knowledge Base, Integrations, Deployments, and Analytics.
+  </Card>
+
+  <Card title="Project" icon="folder" href="#project-sections">
+    Settings, Team, and Subscription.
+  </Card>
+</Columns>
+
+## Informations
+
+Set your chatbot's name and description. These are used to identify the chatbot within your dashboard and provide context to the AI model.
+
+<Steps>
+  <Step title="Name" icon="type">
+    Enter a display name for your chatbot (e.g. `Nyao`). This name appears in the widget header seen by visitors.
+  </Step>
+
+  <Step title="Description" icon="align-left">
+    Provide a brief description of your chatbot's purpose and the website it represents. This helps the AI understand the scope of its knowledge.
+
+    <Callout kind="tip">
+      Be specific. For example: *"The website of the city hall of Douvres la Délivrande presents municipal services, local news, administrative procedures, heritage, tourism, community life, and projects of the municipality located in Calvados, Normandy."*
+    </Callout>
+  </Step>
+</Steps>
+
+Click **Save** to persist your changes.
+
+## Languages
+
+Define which languages your chatbot supports. Each language gets its own localized prompt, welcome message, and suggestions.
+
+<Steps>
+  <Step title="Add a Language" icon="globe">
+    Select a language from the dropdown and click **Add**. Supported languages include:
+
+    - English
+    - French
+    - Spanish
+    - Dutch
+    - German
+    - Italian
+  </Step>
+
+  <Step title="Default Language" icon="flag">
+    The first language added during onboarding is marked as **Default**. This is the fallback language when the visitor's locale is not supported.
+
+    <Callout kind="info">
+      The default language badge appears next to the language name in the list and cannot be removed.
+    </Callout>
+  </Step>
+</Steps>
+
+## Prompt
+
+The system prompt tells the AI how to behave. Each language has its own prompt, allowing you to tailor instructions per locale.
+
+<Tabs>
+  <Tab title="Writing a Prompt" icon="edit-3">
+    A good system prompt should include:
+
+    - **Role** — Who the chatbot is (e.g. *"You are a virtual assistant for the city hall of Douvres la Délivrande."*)
+    - **Scope** — What topics the chatbot covers (e.g. *"municipal services, administrative procedures, local news, heritage, tourism"*)
+    - **Boundaries** — What the chatbot should not do (e.g. *"Stay factual, use only information from the official website. For out-of-scope questions, invite the user to contact municipal services directly."*)
+  </Tab>
+
+  <Tab title="Example Prompt" icon="code">
+````text
+You are a virtual assistant for the city hall of Douvres la Délivrande.
+Answer precisely questions about municipal services, administrative
+procedures, local life, local news, heritage, and the projects of the
+municipality. Stay factual and only use information available on the
+official website. For out-of-scope questions, invite the user to
+contact municipal services directly.
+````
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  If you support multiple languages, switch between locale tabs (e.g. **Francais**, **English**) to write a dedicated prompt for each one.
+</Callout>
+
+Click **Save** to apply the prompt changes.
+
+## Tone
+
+Choose the overall conversational tone the chatbot adopts when responding to visitors.
+
+<Columns cols={2}>
+  <Card title="Professional" icon="briefcase">
+    Formal and business-oriented. Best for corporate and institutional websites.
+  </Card>
+
+  <Card title="Friendly" icon="smile">
+    Warm and approachable. Ideal for customer support and community sites.
+  </Card>
+</Columns>
+
+<Columns cols={2}>
+  <Card title="Casual" icon="coffee">
+    Relaxed and conversational. Works well for blogs and informal platforms.
+  </Card>
+
+  <Card title="Formal" icon="book-open">
+    Strict and precise. Suited for legal, government, or academic contexts.
+  </Card>
+</Columns>
+
+<Expandable title="All Available Tones" default-open="false">
+  | Tone           | Description                                      |
+  |----------------|--------------------------------------------------|
+  | Professional   | Business-oriented, balanced formality             |
+  | Friendly       | Warm and approachable, builds rapport             |
+  | Casual         | Relaxed, conversational language                  |
+  | Formal         | Strict, precise, institutional                    |
+  | Enthusiastic   | Energetic and positive, high engagement           |
+</Expandable>
+
+Select a tone from the dropdown and click **Save**.
+
+## Next Steps
+
+<Callout kind="tip">
+  General settings define *what* your chatbot says. Head to Appearance to control *how* it looks.
+</Callout>
+
+<Columns cols={2}>
+  <Card title="Appearance" icon="palette" href="/concepts/chatbot-appearance">
+    Customize logo, colors, color scheme, welcome screen, and introduction message.
+  </Card>
+
+  <Card title="Knowledge Base" icon="brain" href="/concepts/knowledge-base">
+    Manage crawled pages, add URLs, and trigger re-crawls to keep your chatbot up to date.
+  </Card>
+</Columns>

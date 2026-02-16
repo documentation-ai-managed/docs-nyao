@@ -1,0 +1,164 @@
+---
+title: Chatbot Appearance
+description: Customize your chatbot's visual identity including logo, colors, color scheme, welcome screen, and introduction message with a real-time preview.
+---
+
+## Overview
+
+The **Appearance** page lets you control how your chatbot widget looks and greets visitors. Changes are reflected in a live preview panel on the right side of the page.
+
+<Callout kind="info">
+  Access appearance settings by navigating to **Chatbot > Appearance** in the
+  sidebar of your project dashboard.
+</Callout>
+
+## Theme
+
+Define the core visual identity of your chatbot widget.
+
+<Steps>
+  <Step title="Logo" icon="image">
+    Upload your brand logo by clicking **Change avatar**. The logo appears in the chatbot widget header.
+
+    <Callout kind="tip">
+      Accepted formats: **JPG**, **PNG**, or **GIF**. Maximum file size: **2 MB**.
+    </Callout>
+
+  </Step>
+
+  <Step title="Color Scheme" icon="sun">
+    Choose how the widget adapts to the user's display preference:
+
+    - **Auto** — Follows the visitor's system preference (light or dark)
+    - **Dark** — Forces a dark background
+    - **Light** — Forces a light background
+
+  </Step>
+
+  <Step title="Primary Color" icon="droplet">
+    Pick the accent color used for buttons, links, and highlights inside the widget. Enter a hex value (e.g. `#c45414`) or use the color picker.
+
+    <Callout kind="info">
+      Choose a color that matches your brand and provides good contrast against the background.
+    </Callout>
+
+  </Step>
+
+  <Step title="Background Color" icon="paintbrush">
+    Set the widget header and background color using a hex value (e.g. `#1a1a1a`) or the color picker.
+  </Step>
+</Steps>
+
+Click **Save** to apply theme changes.
+
+## Welcome Screen
+
+Configure the first screen visitors see when they open the chatbot. This section supports **per-language** content — switch between locale tabs (e.g. **Francais**, **English**) to customize each translation.
+
+<Steps>
+  <Step title="Toggle Welcome Screen" icon="toggle-right">
+    Use the **Show welcome screen** switch to enable or disable the welcome screen. When disabled, visitors land directly in the chat conversation.
+  </Step>
+
+<Step title="Title" icon="type">
+  Set the main heading displayed on the welcome screen (e.g. *"Bienvenue sur
+  votre chatbot"*).
+</Step>
+
+<Step title="Subtitle" icon="align-left">
+  Add a subtitle below the title to provide additional context (e.g. *"Comment
+  puis-je vous aider ?"*).
+</Step>
+
+  <Step title="Suggestions" icon="message-circle">
+    Add pre-defined question suggestions that visitors can click to start a conversation instantly.
+
+    <Callout kind="tip">
+      Good suggestions anticipate the most common visitor questions. For example:
+    </Callout>
+
+    - *"Quels sont les horaires d'ouverture de la mairie ?"*
+    - *"Comment prendre rendez-vous pour une carte d'identité ?"*
+    - *"Quelles démarches administratives puis-je faire en ligne ?"*
+
+    Type a suggestion in the input field and click **Add**. Remove any suggestion by clicking the trash icon next to it.
+
+  </Step>
+</Steps>
+
+Click **Save** to apply welcome screen changes.
+
+## Introduction Message
+
+Set the first message the chatbot sends when a visitor starts a new conversation. This is a **per-language** field — each locale has its own introduction message.
+
+<Tabs>
+  <Tab title="Writing an Introduction" icon="edit-3">
+    A good introduction message should:
+
+    - **Greet** the visitor warmly
+    - **Identify** what the chatbot can help with
+    - **Invite** the visitor to ask a question
+
+    Keep it short — one or two sentences work best.
+
+  </Tab>
+
+  <Tab title="Example" icon="code">
+````text
+Bonjour ! Je suis votre assistant virtuel de la mairie de Douvres la
+Délivrande. Comment puis-je vous aider aujourd'hui ?
+````
+  </Tab>
+</Tabs>
+
+Click **Save** to apply the introduction message.
+
+## Live Preview
+
+The right side of the Appearance page displays an interactive preview of your chatbot widget. It updates in real time as you modify theme colors, welcome screen content, and introduction messages.
+
+<Columns cols={3}>
+  <Card title="Dark Preview" icon="moon">
+    Preview the widget in dark mode.
+  </Card>
+
+<Card title="Light Preview" icon="sun">
+  Preview the widget in light mode.
+</Card>
+
+  <Card title="Welcome Preview" icon="layout">
+    Preview the welcome screen with title, subtitle, and suggestions.
+  </Card>
+</Columns>
+
+<Expandable title="Appearance Settings Summary" default-open="false">
+  | Setting | Type | Description |
+  |----------------------|---------------|-------------------------------------------------|
+  | Logo | File upload | Brand logo (JPG, PNG, GIF — 2 MB max) | | Color Scheme
+  | Radio select | Auto, Dark, or Light | | Primary Color | Color picker |
+  Accent color for buttons and links (hex) | | Background Color | Color picker |
+  Widget header and background color (hex) | | Show Welcome Screen | Toggle |
+  Enable or disable the welcome screen | | Title | Text input | Welcome screen
+  heading (per language) | | Subtitle | Text input | Welcome screen subheading
+  (per language) | | Suggestions | List | Clickable question suggestions (per
+  language) | | Introduction Message | Textarea | First chatbot message in
+  conversation (per lang) |
+</Expandable>
+
+## Next Steps
+
+<Callout kind="tip">
+  Appearance controls *how* your chatbot looks. Head to General settings to
+  control *what* it says, or Knowledge Base to manage its content sources.
+</Callout>
+
+<Columns cols={2}>
+  <Card title="General Settings" icon="settings" href="/concepts/chatbot-settings">
+    Configure chatbot name, description, system prompt, and conversational tone.
+  </Card>
+
+  <Card title="Knowledge Base" icon="brain" href="/concepts/knowledge-base">
+    Manage crawled pages, add URLs, and trigger re-crawls to keep your chatbot up to date.
+  </Card>
+</Columns>

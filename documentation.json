@@ -42,6 +42,16 @@
                 "icon": "layers",
                 "pages": [
                   {
+                    "title": "Settings",
+                    "path": "chatbot-settings",
+                    "icon": "settings2"
+                  },
+                  {
+                    "title": "Appearance",
+                    "path": "chatbot-appearance",
+                    "icon": "lucide-palette"
+                  },
+                  {
                     "title": "Features",
                     "path": "features",
                     "icon": "file-text"
