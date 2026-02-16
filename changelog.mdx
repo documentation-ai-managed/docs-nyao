@@ -1,0 +1,129 @@
+---
+title: Changelog
+description: Stay updated with the latest releases, features, and improvements in Nyao.
+---
+
+## Recent Releases
+
+<Callout kind="info">
+Nyao releases follow semantic versioning. Check the [GitHub releases page](https://github.com/your-org/nyao/releases) for full details, download links, and migration guides.
+</Callout>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for shared documents
+- Introduced version history with diff viewer
+- New search across all documentation spaces
+
+## Improvements
+
+- Enhanced editor performance by `>30%`
+- Better mobile responsiveness for docs viewer
+
+## Bug Fixes
+
+- Fixed export to PDF rendering issues
+- Resolved authentication token refresh errors
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Custom themes and branding for documentation spaces
+- Integrated analytics dashboard for page views
+- API endpoints for programmatic document management
+
+## Bug Fixes
+
+- Fixed sidebar navigation collapse on resize
+- Corrected image upload size limits
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Initial Release
+
+- Core documentation editor and preview
+- Space organization and permissions
+- Basic export options (Markdown, HTML)
+
+**Note:** First stable release. See migration guide for earlier betas.
+
+</Update>
+
+## Upgrading Nyao
+
+Follow these steps to upgrade to the latest version.
+
+<Steps>
+  <Step title="Backup Your Data" icon="database">
+
+  Export all spaces:
+
+  ```
+  nyao export --all-spaces backup.json
+  ```
+
+  </Step>
+  <Step title="Update Package" icon="download">
+    <Tabs>
+      <Tab title="npm" icon="package">
+````bash
+npm install nyao@latest
+````
+      </Tab>
+      <Tab title="Docker" icon="docker">
+````bash
+docker pull nyao:latest
+docker run -p 3000:3000 nyao:latest
+````
+      </Tab>
+    </Tabs>
+  </Step>
+  <Step title="Run Migrations" icon="settings">
+    ```
+    nyao migrate
+    ```
+  </Step>
+  <Step title="Restart Server" icon="refresh-cw">
+    Restart your Nyao instance and verify at `http://localhost:3000`.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+After upgrading, clear your browser cache to ensure all new features load correctly.
+</Callout>
+
+## Upcoming Roadmap
+
+Explore what's next for Nyao.
+
+<Columns cols={3}>
+  <Card title="AI Assistant" icon="bot" href="#">
+    Automated content suggestions and summaries coming soon.
+  </Card>
+  <Card title="Advanced Permissions" icon="shield" href="#">
+    Granular role-based access control.
+  </Card>
+  <Card title="Integrations" icon="plug" href="#">
+    Connect with GitHub, Slack, and more.
+  </Card>
+</Columns>
+
+<Expandable title="Join Beta Testing" default-open="false">
+Sign up for early access to upcoming features. Provide feedback to shape Nyao's future.
+
+1. Visit `https://nyao.io/beta`
+2. Submit your email
+3. Follow install instructions
+
+</Expandable>
+
+<Callout kind="success">
+Found a bug or have a feature request? Open an issue on GitHub.
+</Callout>
